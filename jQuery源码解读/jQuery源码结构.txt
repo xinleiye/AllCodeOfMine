@@ -1,0 +1,85 @@
+jQuery JavaScript Library v3.1.1
+https://jquery.com/
+
+Includes Sizzle.js
+https://sizzlejs.com/
+
+( functionI( global, factory ) {
+
+    (18, 37)
+
+})(window, function(window, noGolobal){
+
+    "use strict";   //严格模式
+
+    (48, 112)   //定义了一下些变量和函数，jQuery= function() {...}
+
+    (114, 193)    //给jQuery对象添加一些方法和属性
+
+    (195, 262)  //extend jQuery的继承(扩展)方法的具体实现
+
+    (264, 516)  //jQuery.extend -> jQuery扩展的一些工具方法，既可以用于原生JS，也可以用于jQuery方法
+
+    (522, 543)  //???
+
+    (544, 2810) //Sizzle = (function() {...})(window) -> 复杂选择器的实现，形如$("div li + p input.class")
+
+    (2815, 2900)    //???
+
+    (2902, 2944)    //??? jQuery.fn.extend
+
+    (2951, 3062)    //??? 初始化jQuery 对象
+
+    (3065, 3154)    //??? jQuery.fn.extend
+
+    (3161, 3226)    //jQuery.each
+
+    (3262, 3454)    //Callbacks ->回调对象，函数的统一管理
+
+    (3496, 3834)    //jQuery.extend -> Deferred : 延迟对象，对异步的管理，利用回调实现
+
+    (4265, 4356)    //data -> 数据缓存
+
+    (4349, 4413)    //jQuery.extend -> 队列操作
+
+    (4415, 4481)    //jQuery.fn.extend -> 队列操作 ----为什么会有两个?
+
+    (4482, 4756)    //对元素属性操作
+
+    (4759, 4874)    //fragment 框架集操作
+
+    (4879, 5812)    //事件操作
+
+    (5896, 6061)    //Dom操作: 添加, 删除...
+
+    (6062, 6625)    //css(): CSS操作
+
+    (6628, 7007)    //??? Tween
+
+    (7009, 7426)    //Animation: 动画操作
+
+    (7429, 7580)    //属性操作
+
+    (7585, 7890)    //CSS类操作
+
+    (7895, 8321)    //控件操作
+
+    (8326, 8463)    //xml操作
+
+    (8466, 9874)    //提交数据与ajax
+
+    (9882, 10044)   //获取控件位置
+
+    (10047, 10137)  //滚动条处理
+
+    (10140, 10161)  //事件绑定???
+
+    (10179, 10183)  //注册为要给以命名的AMD模块
+
+    (10188, 10206)  //冲突处理: 如引用的其他框架中也包含$,jQuery时
+
+    (10211, 10213)    //将jQuery或$暴露给外部  if ( !noGlobal ) {window.jQuery = window.$ = jQuery;}
+
+    (10219, 10219)    // return jQuery
+    
+});
