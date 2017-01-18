@@ -1,4 +1,46 @@
-//DOM1基础
+//DOM基础
+
+//Document类型
+//JS通过Document表示文档类型。在浏览器中，document是HTMLDocument的一个实例
+//而HTMLDocument继承自Document
+//最常用的document是window的一个属性
+var wDom = window.document;
+
+//document有一个documentElement属性，指向html元素
+var wHtml = wDom.documentElement;
+console.log(wHtml);    //html及其下的所有子节点
+
+//document的body属性，指向body
+var wBody = wDom.body;
+console.log(wBody);    //null  --->but why?
+
+//title属性
+var wTitle = wDom.title;
+console.log(wTitle);    //DOM
+
+//URL domain referrer属性
+var wURL = wDom.URL,
+    wDomain = wDom.domain,
+    wReferrer = wDom.referrer;
+console.log(wURL);        //浏览器标题栏中的信息
+console.log(wDomain);     //域名   --->可以由紧向松改变，但不可以由松向紧转变
+console.log(wReferrer);   //链接到当前页面的那个页面的URL
+
+//查找元素
+//getElementById()
+var myDiv = wDom.getElementById("div1");
+console.log(myDiv);    //myDiv中包含id为div1的元素及其下的所有子元素
+
+//getElementsByTagName()
+var myUl = wDom.getElementsByTagName("ul");
+console.log(myUl);    //myUl为一个HTMLCollection的Nodelist，包含0个或多个元素
+
+//getElementsByName()  namedItem()
+var myNamed = wDom.getElementsByName("color");
+console.log(myNamed);   //myNamed为一个HTMLCollection的Nodelist，包含0个或多个元素
+console.log(myNamed.namedItem("color"));
+
+//Node类型
 //DOM1定义了一个Node接口，其在JS中是作为Node类型实现的。
 //JS中的所有节点类型都继承自Node类型，因此所有的都有着相同的基础属性与方法
 //Node节点类型共有12种：
@@ -14,6 +56,8 @@
 //
 //
 //
+
+
 //所有节点都有的属性：
 //nodeName：对于元素类节点，其值为标签名
 //nodeValue：
