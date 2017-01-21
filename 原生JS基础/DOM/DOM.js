@@ -111,17 +111,103 @@ var hasXmlDom = wDom.implementation.hasFeature("xml", "1.0");
 var doc = window.document;
 var div = doc.getElementById("div1");
 console.log(div.id + " " + div.title + " " + div.lang + " " + div.dir + " " + div.className);
-
 //特性操作
 //取得特性 getAttribute()
 console.log(div.getAttribute("title"));
-
 //设置特性 setAttribute()
 div.setAttribute("title", "List area");
 //移除特性 removeAttribute()    --->从元素中完全删除特性
 div.removeAttribute("title");
 
 
-//attributes    --->Element类型是使用attributes属性的唯一DOM节点
 
+
+//attributes    --->Element类型是使用attributes属性的唯一DOM节点
+//attributes属性中包含一个动态的NamedNodeMap对象
+//元素的每一个特性以Attr节点表示，保存在NamedNodeMap中
+//attributes属性有如下方法：
+//getNamedItem(name)   返回nodeName为name的节点
+var id = div.attributes.getNamedItem("id");
+console.log(id);    //id="div1"
+id = id.nodeValue;
+console.log(id);    //div1
+
+//removeNamedItem(name)    移除nodeName为name的节点
+div.attributes.removeNamedItem("lang");
+
+//setNamedItem(Attr)    向元素新增一个Attr特性 --->不常用    
+//div.attributes.setNamedItem(lang="fr");    --->有误，需要传入Attr类型的参数
+
+//item(pos)    返回pos位置处的节点
+console.log( div.attributes.item(1) );
+
+//将DOM元素转换为XML格式
+function outputAttributes(element) {
+    var pairs = new Array(),
+        attrName,
+        attrValue,
+        i,
+        len;
+
+    for(i=0, len=element.attributes.length; i<len; i++) {
+        attrName = element.attributes[i].nodeName;
+        attrValue = element.attributes[i].nodeValue;
+        if (element.attributes[i].specified === true) {
+            pairs.push(attrName + "=" + "\"" + attrValue + "\"");
+        }
+    }
+    return pairs.join(" ");
+}
+var temp = outputAttributes(div);
+console.log(temp);    //id="div1" class="bd" dir="ltr"
+
+
+
+//创建元素
+//document.createElement(tagName);    //入参：元素的标签名
+var newDiv1 = doc.createElement("div");
+//为创建的div元素添加特性节点
+newDiv1.id = "newDiv1";
+newDiv1.className = "border";
+//将新建的节点添加到文档树
+doc.body.appendChild(newDiv1);
+
+//另一种创建元素的方法
+//var newDiv2 = doc.createElement("<div id=\"newDiv2\" class=\"box\"></div>");
+//doc.body.appendChild(newDiv2);
+
+})();
+
+
+
+
+//==========Text类型==========
+//文本节点
+//特征
+//nodeType: 3
+//nodeName: #text
+//nodeValue: 节点包含的文本
+//parentNode: 是Element
+//无子节点
+
+//方法
+//appendData(text): 将text添加到文本末尾
+//deleteData(offset, count): 从offset位置开始，删除count个字符
+//insertData(offset, text): 在offset位置处，插入text
+//replaceData(offset, count, text): 用text替换从offset开始的count个字符
+//splitText(offset): 从offset开始将文本分为两部分
+//substringData(offset, count): 从offset开始提取count个字符
+
+//属性
+//length: 节点中的字符数
+(function(){
+    var doc = window.document;
+    var div2 = doc.getElementById("div2");
+    var textNode = div2.firstChild;
+
+    console.log(textNode);
+    div2.firstChild.nodeValue = "This is new text";    //< > "" 会被转码
+
+//创建文本节点
+//createTextNode(text)    入参为要创建的文本
 })();
