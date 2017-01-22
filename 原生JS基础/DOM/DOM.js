@@ -210,4 +210,28 @@ doc.body.appendChild(newDiv1);
 
 //创建文本节点
 //createTextNode(text)    入参为要创建的文本
+    textNode = doc.createTextNode("Hello World");
+    var newDiv = doc.createElement("div");
+    newDiv.className = "message";
+    newDiv.appendChild(textNode);
+    var anotherTextNode = doc.createTextNode("Yammi");
+    newDiv.appendChild(anotherTextNode);
+    doc.body.appendChild(newDiv);
+//规范化文本节点   --->将多个文本节点合并为一个
+    console.log(newDiv.childNodes.length);    //2
+    newDiv.normalize();
+    console.log(newDiv.childNodes.length);    //1
+
+//分割文本节点
+//splitText(pos)    将文本节点分割为两个：原节点从开始(0)到pos；新节点为从到结束
+    newTextNode = newDiv.firstChild.splitText(5);
+    console.log(newDiv.childNodes.length);    //2
+    console.log(newDiv.firstChild.nodeValue);    //Hello
+    console.log(newTextNode.nodeValue);    // WorldYammi
+
 })();
+
+
+
+
+//==========Comment类型==========
