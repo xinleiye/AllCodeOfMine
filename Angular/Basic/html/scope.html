@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Scope</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/scope.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="myCtrl1">
+            <h1>Example 1: </h1>
+            {{ carname }}
+        </div>
+        <div ng-controller="myCtrl2">
+            <h1>Example 2: </h1>
+            <input ng-model="myName">
+            <p>我的名字是：{{ myName }}</p>
+        </div>
+        <div ng-controller="myCtrl3">
+            <h1>Example 3: </h1>
+            <ul>
+                <li ng-repeat="x in names">{{ x }}</li>
+            </ul>
+            <!--正常显示-->
+            <p>{{ lastName }}</p>
+        </div>
+        <div ng-controller="myCtrl4">
+            <h1>Example 4:</h1>
+            <p>{{ lastName }} 家族成员：</p>
+            <ul>
+                <li ng-repeat="x in names">{{ x }} {{ lastName }}</li>
+            </ul>
+            <!--无法显示-->
+            <p>{{ myName }}</p>
+        </div>
+    </body>
+</html>

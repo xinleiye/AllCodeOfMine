@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Table</title>
+        <link rel="stylesheet" type="text/css" href="../css/table.css">
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/dom.js"></script>
+    </head>
+    <body ng-app>
+        <div ng-init="mySwitch=true">
+            <h1>Example 1: ng-disabled</h1>
+            <p>
+                <!--ng-disabled指令绑定应用程序数据"mySwitch"到HTML的disabled属性-->
+                <button ng-disabled="mySwitch">点我</button>
+            </p>
+            <p>
+                <!--ng-model指令绑定"mySwitch"到HTML input checkbox的value-->
+                <input type="checkbox" ng-model="mySwitch">按钮
+            </p>
+            <p>{{ mySwitch }}</p>
+        </div>
+        <div>
+            <h1>Example 2: ng-show</h1>
+            <p>ng-show显示或隐藏一个HTML元素</p>
+            <p ng-show="true">我是可见的</p>
+            <p ng-show="false">我是不可见的</p>
+        </div>
+        <div ng-init="hour=13">
+            <h1>Example 3:</h1>
+            <p>ng-show根据布尔值来显示HTML元素</p>
+            <p ng-show="hour > 12">我是可见的</p>
+        </div>
+        <div>
+            <h1>Example 4:</h1>
+            <p>ng-hide根据布尔值来显示HTML元素</p>
+            <p ng-hide="true">我是不可见的</p>
+            <p ng-hide="false">我是可见的</p>
+        </div>
+    </body>
+</html>

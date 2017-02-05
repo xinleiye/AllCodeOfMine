@@ -1,0 +1,2 @@
+该目录下的程序，参考自
+http://www.runoob.com/angularjs/angularjs-tutorial.html

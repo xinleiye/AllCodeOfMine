@@ -1,0 +1,34 @@
+﻿<!doctype html>
+<html>
+    <head>
+	      <meta charset="utf-8"/>
+	      <title>Controller</title>
+	      <script type="text/javascript" src="../libs/angular.js"></script>
+	      <script type="text/javascript" src="../js/controller.js"></script>
+	  </head>
+	  <!--ng-app定义了一个AngularJS应用程序-->
+	  <body ng-app="myApp">
+	      <!--ng-controller属性定义了一个控制器，myCtrl是一个Javascript函数-->
+	      <div ng-controller="myCtrl">
+	          <h1>Example 1:</h1>
+	          姓：<input type="text" ng-model="firstName" />
+	          名：<input type="text" ng-model="lastName" />
+	          <p>姓名：{{ firstName }}{{ lastName }}</p>
+	      </div>
+	      <div ng-controller="personCtrl">
+	          <h1>Example 2:</h1>
+	          First Name: <input type="text" ng-model="firstName" />
+	          Last Name:  <input type="text" ng-model="lastName" />
+	          <br />
+	          姓名：{{fullName()}}
+	      </div>
+	      <div ng-controller="namesCtrl">
+	          <h1>Example 3:</h1>
+	          <ul>
+	              <li ng-repeat="x in names">
+	                  {{ x.name + ',' + x.country }}
+	              </li>
+	          </ul>
+	      </div>
+	  </body>
+</html>

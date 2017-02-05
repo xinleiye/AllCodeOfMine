@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Select</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/select.js"></script>
+    </head>
+    <body>
+        <div ng-controller="myCtrl1">
+            <h1>Example 1:</h1>
+            <p>ng-options创建选择框，ng-init设置默认选择项</p>
+            <select ng-init="selectedName = names[0]", ng-model="selectedName" ng-options="x for x in names"></select>
+        </div>
+        <div ng-controller="myCtrl1">
+            <h1>Example 2:</h1>
+            <p>ng-repeat实现的选择框</p>
+            <select ng-init="selectedName = names[0]" ng-model="selectedName">
+                <option ng-repeat="x in names">{{ x }}</option>
+            </select>
+        </div>
+        <div ng-controller="myCtrl2">
+            <h1>Example 3:</h1>
+            <p>ng-options与ng-repeat实现的选择框的区别：</p>
+            <p>使用ng-repeat选择的是一个字符串</p>
+            <select ng-init="selectedSite1 = sites[0].site" ng-model="selectedSite1">
+                <option ng-repeat="x in sites" value="{{ x.url }}">{{ x.site }}</option>
+            </select>
+            <p>你选择的是：{{ selectedSite1 }} </p>
+            <p>使用ng-options选择的选项是一个对象</p>
+            <select ng-init="selectedSite2 = sites[0]" ng-model="selectedSite2" ng-options="x.site for x in sites"></select>
+            <p>你选择的是：{{ selectedSite2.site}}</p>
+            <p>网址为：{{ selectedSite2.url }}</p>
+        </div>
+        <div ng-controller="myCtrl3">
+            <h1>Example 4:</h1>
+            <p>数据源为对象</p>
+            <select ng-init="selectedSite3 = sites[0]" ng-model="selectedSite3" ng-options="x for (x, y) in sites"></select>
+            <p>你选择的是：{{ selectedSite3 }}</p>
+            <select ng-init="selectedCar = cars[0]" ng-model="selectedCar" ng-options="y.brand for (x, y) in cars"></select>
+            <p>你选择的是：{{ selectedCar.brand }}</p>
+            <p>型号为：{{ selectedCar.model }}</p>
+            <p>颜色为：{{ selectedCar.color }}</p>
+        </div>
+    </body>
+</html>

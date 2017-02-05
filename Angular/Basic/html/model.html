@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Model</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/model.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/model.css"/>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <h1>Example 1 (数据双向绑定): </h1>
+            名字：<input ng-model="name">
+            <div>你输入了：{{ name }}</div>
+        </div>
+        <!--ng-show指令返回ture时，显示信息-->
+        <form name="myForm1">
+            <h1>Example 2 (验证用户输入): </h1>
+            Email:
+            <input type="email" name="myAddress" ng-model="text1">
+            <span ng-show="myForm.myAddress.$error.email">不是一个合法的地址</span>
+        </form>
+        <form name="myForm2" ng-init="text2='test@email.com'">
+            <h1>Example 3 (应用状态): </h1>
+            Email:
+            <input type="email" name="myAddress" ng-model="text2" required>
+            <div>
+                状态:
+                <p>Valid:    {{ myForm2.myAddress.$valid }} (如果输入的值是合法的则为 true)</p>
+                <p>Dirty:    {{ myForm2.myAddress.$dirty }} (如果值改变则为 true)</p>
+                <p>Touched:  {{ myForm2.myAddress.$touched }} (如果通过触屏点击则为 true)</p>
+            </div>
+        </form>
+        <form name="myForm3">
+            <h1>Example 4</h1>
+            输入你的名字：
+            <input id="name" name="myName" ng-model="text3" required>
+        </form>
+    </body>
+</html>

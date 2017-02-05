@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Service</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/service.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <div ng-controller="myCtrl">
+            <h1>Example 1:</h1>
+            <p>你的地址：{{ myURL }}</p>
+        </div>
+        <div ng-controller="myCtrl1">
+            <h1>Example 2:</h1>
+            <p>2秒后显示新信息</p>
+            <p>{{ message }}</p>
+        </div>
+        <div ng-controller="myTime">
+            <h1>Example 3:</h1>
+            <p>时间：{{ nowTime }}</p>
+        </div>
+        <div ng-controller="myCtrl2">
+            <h1>Example 4:</h1>
+            <p>自定义服务，将数字转化为16进制</p>
+            <input type="number" ng-model="num.dec">
+            <p>{{ dec }} to hex is {{ hex }}</p>
+        </div>
+        <div ng-controller="myCtrl3">
+            <h1>Example 4:</h1>
+            <p>在获取数组 [255, 251, 200] 值时使用过滤器:</p>
+            <ul>
+                <li ng-repeat="x in counts">{{ x | myFormate }}</li>
+            </ul>
+        </div>
+    </body>
+</html>

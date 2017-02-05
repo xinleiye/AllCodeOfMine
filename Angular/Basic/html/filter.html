@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+    <head>
+	      <meta charset="utf-8"/>
+	      <title>Filter</title>
+	      <script type="text/javascript" src="../libs/angular.js"></script>
+	      <script type="text/javascript" src="../js/filter.js"></script>
+	  </head>
+	  <!--ng-app定义了一个AngularJS应用程序-->
+	  <body ng-app="myApp">
+	      <!--通过管道字符(|)添加了过滤器-->
+	      <div ng-controller="myCtrl">
+	          <h1>Example 1:</h1>
+	          姓：<input type="text" ng-model="firstName" />
+	          名：<input type="text" ng-model="lastName" />
+	          <p>姓名：{{ firstName | uppercase }} {{ lastName | lowercase }}</p>
+	      </div>
+	      <div ng-controller="costCtrl">
+	          <h1>Example 2:</h1>
+	          <input type="number" ng-model="quantity" />
+	          <input type="number" ng-model="price" />
+	          <p>总价：{{ (quantity * price) | currency }}</p>
+	      </div>
+	      <!--向指令添加过滤器-->
+	      <div ng-controller="namesCtrl">
+	          <h1>Example 3:</h1>
+	          <ul>
+	              <li ng-repeat="x in names | orderBy:'country'">
+	                  {{ x.name + ',' + x.country }}
+	              </li>
+	          </ul>
+	      </div>
+	      <div ng-controller="namesCtrl">
+	          <h1>Example 4:</h1>
+	          <p>输入过滤：</p>
+	          <p><input type="text" ng-model="test"</p>
+	          <ul>
+	              <li ng-repeat="x in names | filter:test | orderBy:'country'">
+	                  {{ x.name + ',' + x.country }}
+	              </li>
+	          </ul>
+	      </div>
+	  </body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<!--
+AngularJS表达式：
+1.写在双大括号内：{{ expression }}
+2.把数据绑定到HTML，与ng-bind类似
+3.在表达式处输出数据
+
+与Javascript表达式的关系：
+相同点：
+1.都可以包含数字，运算符和变量
+不同点：
+1.可以写在HTML中
+2.不支持条件判断，循环和异常
+3.支持过滤器
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Expression</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+    </head>
+    <body ng-app="">
+        <div >
+            <p>我的第一个表达式：{{ 5 + 5 }}</p>
+        </div>
+        <div ng-init="quantity=1; cost=5">
+            数字：<br>
+            <p>总价：{{ quantity * cost }}</p>
+            <p>总价：<span ng-bind="quantity * cost"></span> (use ng-bind)</p>
+        </div>
+        <div ng-init="firstName='John'; lastName='Doe'">
+            字符串：<br>
+            <p>姓名：{{ firstName + ' ' + lastName}}</p>
+            <p>姓名：<span ng-bind="firstName + ' ' + lastName"></span> (use ng-bind)</p>
+        </div>
+        <div ng-init="person={firstName:'John', lastName:'Doe'}">
+            对象：
+            <p>姓为：{{ person.lastName}}</p>
+            <p>姓为：<span ng-bind="person.lastName"></span> (use ng-bind)</p>
+        </div>
+        <div ng-init="points=[1, 15, 19, 2, 40]">
+            数组：
+            <p>第三个值为：{{ points[2] }}</p>
+            <p>第三个值为：<span ng-bind="points[2]"></span> (use ng-bind)</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+/*
+ng-model 指令根据表单的状态添加/移除以下类：
+ng-empty
+ng-not-empty
+ng-touched
+ng-untouched
+ng-valid
+ng-invalid
+ng-dirty
+ng-pending
+ng-pristine
+*/
+
+#name.ng-invalid {
+    background-color: red;
+}
+#name.ng-valid {
+    background-color: green;
+}

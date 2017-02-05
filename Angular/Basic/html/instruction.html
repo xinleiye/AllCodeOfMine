@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<!--
+指令：
+1.angularJS的指令是扩展的HTML属性，带有 ng- 前缀。
+e.g.
+ng-app: 
+1.定义angular应用程序的根元素
+2.在页面加载完成后，会自动引导应用程序
+ng-init: 
+1.为应用程序定义了初始值
+2.通常情况下，不使用ng-init，而是用一个控制器或模块来代替他。
+ng-model: 
+1.把HTML元素绑定到应用程序
+2.为应用程序提供类型验证(number, email, required)
+3.为应用程序数据提供状态(invalid, dirty, touched, error)
+4.为HTML元素提供CSS类
+5.绑定HTML元素到HTML表单
+ng-repeat:
+1.对集合中每一项复制一次HTML元素
+
+...
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Instruction</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/instruction.js"></script>
+    </head>
+    <!--ng-app指令告诉angularJS body元素是angular应用程序的所有者-->
+    <body ng-app="myApp">
+        <!--Angualr中的数据绑定通过表达式实现{{ firstName }}，数据同步通过ng-model指令实现-->
+        <div ng-init="firstName='John'">
+            Example1:
+            <p>在输入框中输入：</p>
+            <p>姓名：<input type="text" ng-model="firstName"></p>
+            <p>你的输入为：{{ firstName }}</p>
+        </div>
+        <div ng-init="quantity=1; price=5">
+            Example2:
+            <h2>价格计算器</h2>
+            数量：<input type="number" ng-model="quantity">
+            价格：<input type="number" ng-model="price">
+            <p><b>总价：</b>{{ quantity * price }}</p>
+        </div>
+        <div ng-init="names=['Jani', 'Hege', 'Kai']">
+            Example3:
+            <ul>
+                <li ng-repeat="x in names">
+                    {{ x }}
+                </li>
+            </ul>
+        </div>
+        <div>
+        Example4:
+            <runoob-directive></runoob-directive>
+        </div>
+    </body>
+</html>
