@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Event</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/event.js"></script>
+    </head>
+    <body>
+        <div ng-controller="myController">
+            <h1>Example 1:</h1>
+            <p>ng-click指令定义了AngularJS的点击事件</p>
+            <button ng-click="count = count + 1">点我！</button>
+            <p>{{ count }}</p>
+        </div>
+        <div ng-controller="personController1">
+            <h1>Example 2:</h1>
+            <p>利用ng-hide指令，通过单击按钮来显示/隐藏HTML元素</p>
+            <button ng-click = "toggle()">隐藏/显示</button>
+            <p ng-hide="myStatus">
+            姓：<input type="text" ng-model="firstName"><br>
+            名：<input type="text" ng-model="lastName"><br>
+            姓名：{{ firstName + " " + lastName }}
+            </p>
+        </div>
+        <div ng-controller="personController2">
+            <h1>Example 3:</h1>
+            <p>利用ng-show指令，显示/隐藏HTML元素</p>
+            <button ng-click="toggle()">显示/隐藏</button>
+            <p ng-show="myStatus">
+            姓：<input type="text" ng-model="firstName"><br>
+            名：<input type="text" ng-model="lastName"><br>
+            姓名：{{ firstName + " " + lastName }}
+        </div>
+    </body>
+</html>
