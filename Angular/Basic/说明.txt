@@ -2,4 +2,5 @@
 http://www.runoob.com/angularjs/angularjs-tutorial.html
 
 疑问：
-1.$的作用？
+1.$的作用？    --2017.02.07
+2.http.html(服务)与include.html(包含)需要服务器配合才能验证    --2017.02.08

@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Include</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/include.js"></script>
+    </head>
+    <div ng-include="'included.html'">
+        <h1>Example 1:</h1>
+    </div>
+    <div ng-controller="sitesController">
+        <div ng-include="'sites.html'"></div>
+    </div>
+    <div ng-include="'http://c.runoob.com/runoobtest/angular_include.php'"></div>
+</html>

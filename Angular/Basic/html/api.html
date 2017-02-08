@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Api</title>
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/api.js"></script>
+    </head>
+    <body>
+    	<div ng-controller="myController1">
+    		<h1>Example 1:</h1>
+    		<p>angular.lowercase()</p>
+    		<p>{{ x1 }}</p>
+    		<p>{{ x2 }}</p>
+    	</div>
+    	<div ng-controller="myController2">
+    		<h1>Example 2:</h1>
+    		<p>angular.uppercase()</p>
+    		<p>{{ x1 }}</p>
+    		<p>{{ x2 }}</p>
+    	</div>
+    	<div ng-controller="myController3">
+			<h1>Example 3:</h1>
+			<p>angular.isString()</p>
+			<p>{{ x1 }}</p>
+			<p>{{ x2 }}</p>
+    	</div>
+    	<div ng-controller="myController4">
+    		<h1>Example 4:</h1>
+    		<p>angular.isNumber()</p>
+    		<p>{{ x1 }}</p>
+    		<p>{{ x2 }}</p>
+    	</div>
+    </body>
+</html>
