@@ -2,5 +2,11 @@
 http://www.runoob.com/angularjs/angularjs-tutorial.html
 
 疑问：
-1.$的作用？    --2017.02.07
-2.http.html(服务)与include.html(包含)需要服务器配合才能验证    --2017.02.08
+2017.02.07
+1.$的作用？
+
+2017.02.08
+1.http.html(服务)与include.html(包含)需要服务器配合才能验证
+
+2017.02.09
+1.将Bootstrap加入到AngularJS应用中后，由于代码完全手敲，将ng-controller错误的拼写为ng-contorller，导致页面样式无法正确显示，且浏览器未给出错误提示。
