@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title>Bootstrap</title>
+        <link rel="stylesheet" href="../libs/bootstrap.css">
+        <script type="text/javascript" src="../libs/angular.js"></script>
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+    </head>
+    <body ng-controller="userController">
+        <div class="container">
+            <h3>User List</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Edit</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
+                        <td>
+                            <button class="btn" ng-click="editUser(user.id)">
+                                <span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Edit
+                            </button>
+                        </td>
+                        <td>{{ user.fName }}</td>
+                        <td>{{ user.lName }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
