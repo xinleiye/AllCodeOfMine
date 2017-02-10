@@ -10,3 +10,7 @@ http://www.runoob.com/angularjs/angularjs-tutorial.html
 
 2017.02.09
 1.将Bootstrap加入到AngularJS应用中后，由于代码完全手敲，将ng-controller错误的拼写为ng-contorller，导致页面样式无法正确显示，且浏览器未给出错误提示。
+
+2017.02.10
+1.完成了一个与Bootstrap有关的应用。
+2.页面可以调整的更好：将User List与修改添加部分并列，占比为7:3，然后把保存按钮保存到下方。
