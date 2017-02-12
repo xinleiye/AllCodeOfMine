@@ -18,3 +18,7 @@ http://www.runoob.com/angularjs/angularjs-tutorial.html
 2017.02.11
 1.Angular-animate需要深入了解
 2.AngularJS的依赖注入(DI)是核心内容，需要进一步学习
+
+2017.02.12
+1.学习AngularJS的路由，需要进一步理解
+2.使用node.js建立了一个本地服务，目前可以进行Ajax的学习
