@@ -1,0 +1,3 @@
+AJAX
+
+AJAX = Asynchronous JavaScript and XML£¨Òì²½µÄ JavaScript ºÍ XML£©¡£
