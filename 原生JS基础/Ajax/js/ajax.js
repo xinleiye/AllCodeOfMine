@@ -3,9 +3,9 @@
 
 1.实例化XMLHttpRequest对象
     if (window.XMLHttpRequest) {
-        httpObj = new XMLHttpRequest();
+        xhr = new XMLHttpRequest();
     } else {
-        httpObj = new ActiveXObject("Microsoft.XMLHTTP");
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
 
 2.连接服务器:open("GET", url, true)
@@ -35,34 +35,52 @@
       1).responseText:获得字符串形式的响应数据
       2).responseXML:获得XML形式的响应数据
 */
+function getRandom(fir, sec) 
+{
+    var ret = 0;
+    var diff = fir > sec ? fir - sec : sec - fir;
 
-function getAjaxData(src) {
+    ret = Math.round( (Math.random() * diff + fir) );
 
-    var httpObj = {};
-    if (window.XMLHttpRequest) {
-        httpObj = new XMLHttpRequest();
-    } else {
-        httpObj = new ActiveXObject("Microsoft.XMLHTTP");
+    return ret;
+}
+
+function ajax(obj, callback) {
+
+    var xhr = null;
+    try {
+        xhr = new XMLHttpRequest();
+    } 
+    catch(e) {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
 
-    var method = "";
-    if (src[method] === "GET") {
-        method = "GET";
+    var url = obj.url + obj.data;
+    var method = obj.method;
+    var async = obj.async;
+    if (method === "GET") {
+        url = url + "?t=" + getRandom(1000, 9999);
     } else {
-        method = "POST";
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     }
 
-    var url = "";
-    httpObj.onreadystatechange = function() {
-        if (httpObj.readyState === 4) {
-            if ( httpObj.status >= 200 && httpObj.status < 300) {
-                console.log(httpObj.responseText);
-                document.getElementById("test").innerHTML=httpObj.responseText;
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+            if ( xhr.status >= 200 && xhr.status < 300) {
+                callback(xhr.responseText);
             } else {
             //dosomething
             }
         }
     };
-    httpObj.open(method, url + "?=" + Math.random(), true);
-    httpObj.send(null);
+
+    xhr.open(method, url, async);
+
+    if (method === "GET") {
+        xhr.send(null);
+    } else {
+        xhr.send(url);
+    }
+    
 }
+
