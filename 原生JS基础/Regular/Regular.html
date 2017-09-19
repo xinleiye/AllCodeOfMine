@@ -1,13 +1,66 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <title>Regular Expression</title>
         <script type="text/javascript" src="./Regular.js"></script>
     </head>
     <body>
         <h1>Example 1:</h1>
-        <div id="div1">
-        </div>
+        <fieldset>
+            <p><strong>Regular Expression: </strong><br />
+            /^(?:([A-Za-z]+):)?(\/{0,3})([0-9.\-A-Za-z]+)(?::(\d+))?(?:\/([^?#]*))?(?:\?([^#]*))?(?:#(.*))?$/</p>
+            <p><strong>URL: </strong><br />
+            http://www.ora.com:80/goodparts?q#fragment</p>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p><strong>Result: </strong></p>
+            </div>
+            <div id="div1">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <p><strong>Parse:</strong></p>
+            </div>
+            <div>
+                <p><strong>^</strong>: 表示字符串的起始</p>
+                <p>
+                    <strong>(?:([A-Za-z]+):)?</strong>  匹配一个协议名，以冒号结尾。
+                    <strong>(?:....)</strong> 表示一个非捕获分组; 
+                    <strong>?</strong> 表示该分组为可选的，重复0次或1次; 
+                    <strong>[....]</strong> 表示一个字符类; 
+                    <strong>-</strong> 表示一个范围，A-Za-z表示大小写英语字母; 
+                    <strong>+</strong> 表示前面的类重复1次或多次
+                </p>
+                <p>
+                    <strong>(\/{0,3})</strong> 匹配0至3个/。
+                    <strong>(....)</strong> 捕获型分组; 
+                    <strong>\</strong> 反斜杠，转义字符，\/表示一个正斜杠;
+                    <strong>{0,3}</strong> 匹配的次数范围
+                </p>
+                <p>
+                    <strong>([0-9.\-A-Za-z]+)</strong> 捕获型分组3，匹配一个主机名，包含数字，大小写英语字母，字符.与字符-
+                </p>
+                <p>
+                    <strong>(?::(\d+))?</strong> 非捕获型分组，匹配端口号。以:开始，若匹配到，则将端口号作为捕获型分组4
+                </p>
+                <p>
+                    <strong>(?:\/([^?#]*))?</strong> 非捕获型分组，以/开始; 
+                    <strong>[^?#]</strong> 该字符类内，以^开始，匹配除?、#外的所有字符; 
+                    <strong>*</strong> 号表示该字符类被匹配0次或多次
+                </p>
+                <p>
+                    <strong>(?:\?([^#]*))?</strong> 非捕获型分组，以?开始，包含一个不含#的捕获型分组
+                </p>
+                <p>
+                    <strong>(?:#(.*))?</strong> 可选的非捕获型分组，以#开始，.将匹配除行结束符外的所有字符
+                </p>
+                <p>
+                    <strong>$</strong> 表示字符串的结束
+                </p>
+            </div>
+        </fieldset>
     </body>
 </html>

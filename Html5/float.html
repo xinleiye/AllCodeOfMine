@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Float</title>
+        <style>
+            .div1{
+                width: 200px;
+                height: 200px;
+                background-color: black;
+                float: left;
+            }
+            .box{
+                border: 1px solid red;
+            }
+            .item{
+                width: 100px;
+                height: 100px;
+                background-color: blue;
+                float: left;
+            }
+            .clearfix:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <p><strong>float: left right none inherit</strong></p>
+            <p><strong>浮动：</strong>使元素脱离文档流，按照指定方向发生移动，遇到父级边界或者相邻的浮动元素后停止</p>
+            <p><strong>特征：</strong></p>
+            <p>1. 块在一排显示</p>
+            <p>2. 内联支持宽高</p>
+            <p>3. 默认内容撑开宽度</p>
+            <p>4. 脱离文档流</p>
+            <p>5. 层级提升半级</p>
+            <p><strong>文档流：</strong>文档中可显示元素在排列时所占用的位置</p>
+        </fieldset>
+        <fieldset>
+            <p><strong>clear: left right both none inherit</strong></p>
+            <p>清除浮动</p>
+            <p>1. 手动加高。不够灵活；高度不固定时不可使用，如瀑布流</p>
+            <p>2. 给父级元素加浮动。可能要一层层给父级元素加浮动；使margin: auto（居中）失效</p>
+            <p>3. 给父级元素加inline-block。使margin: auto（居中）失效</p>
+            <p>4. 增加一个空兄弟标签。在每一个有浮动的地方都要增加一个空标签</p>
+            <p>5. br元素，利用br元素的clear="all"属性来清除浮动。不符合结构，样式，行为分离的原则</p>
+            <p>6. 利用after伪类清除浮动（主要的方法）</p>
+            <p>7. overflow: hidden;清除浮动。会使父元素之外的元素隐藏</p>
+        </fieldset>
+        <br/>
+        <h1>Example 1:</h1>
+        <div>
+            <div class="div1">1</div>
+            <div class="div1">2</div>
+            <div class="div1">3</div>
+        </div>
+        <h1>Example 2:</h1>
+        <div class="box clearfix">
+            <div class="item">
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Opacity</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            .box{
+                width: 200px;
+                height: 200px;
+                margin: 100px auto;
+                //background: blue;
+                position: relative;
+                //color: white;
+                //opacity: 0.5;
+            }
+            .content{
+                width: 200px;
+                height: 200px;
+                background-color: red;
+                position: absolute;
+                top: -3px;
+                left: -3px;
+            }
+            .mark{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+                position: absolute;
+                right: -3px;
+                bottom: -3px;
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="mark"></div>
+            <div class="content">AAA</div>
+        </div>
+    </body>
+</html>

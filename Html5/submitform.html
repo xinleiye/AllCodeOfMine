@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Form</title>
+        <style>
+            input{
+                display: inline-block;
+            }
+            select{
+                width: 100px;
+            }
+            textarea{
+                widht: 500px;
+                height: 500px;
+            }
+            label{
+                width: 100px;
+                text-align: right;
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="">
+            <p>
+                <label for="username">用户名：</label>
+                <input id="username" type="text" name="username" disabled="disabled" placeholder="Input user name"/>
+            </p>
+            <p>
+                <label for="pwd">密码：</label>
+                <input id="pwd" type="password" name="password" placeholder="Input password"/>
+            </p>
+            <p>
+                <label>性别：</label>
+                <input type="radio" name="sex" value="1" /><span>Male</span>
+                <input type="radio" name="sex" value="0" /><span>Female</span>
+            </p>
+            <input type="checkbox" name="faverite" value="bt"/><span>Football</span>
+            <input type="checkbox" name="faverite" value="bb"/><span>Basketball</span>
+            <input type="submit" value="OK" />
+            <input type="reset" value="Clear" />
+            <p>
+                <input type="button" value="Hello"/>
+            </p>
+            <input type="image" src="" />
+            <input type="file" />
+            <input type="hidden" value="hidden"/>
+        </form>
+        <select>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <textarea>
+            
+        </textarea>
+    </body>
+</html>
