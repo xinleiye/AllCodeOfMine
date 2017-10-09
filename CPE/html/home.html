@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CPE</title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/home.css" />
+    <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../lib/json2.js"></script>
+    <script type="text/javascript" src="../language/lang_en_us.js"></script>
+    <script type="text/javascript" src="../js/tools.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/home.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="header" class="header"></div>
+        <div id="content" class="content clearfix">
+            <div id="content-top" class="content-top"></div>
+            <div id="content-home" class="content-home">
+                <div id="content-data-box" class="content-home-box">
+                    <div id="internet-info" class="internet-info">
+                        <img id="internet-img" src="../images/signal_big_0.png">
+                        <p id="internet-name"></p>
+                    </div>
+                    <div id="data-info" class="data-info">
+                        <div id="data-status" class="data-status"><span></span></div>
+                        <div id="profile-setting" class="profile-setting">
+                            <a href="internet.html"><script type="text/javascript">getText(str_home_internetsettings);</script></a>
+                        </div>
+                        <div id="data-btn" class="pointer data-btn data-off"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="content-split" class="content-split"></div>
+            <div id="content-netinfo" class="content-netinfo clearfix">
+                <div class="home-wlaninfo">
+                    <h2><script>getText(str_home_curcon)</script></h2>
+                    <table cellpadding="0" cellspacing="0" class="home-table">
+                        <tbody>
+                            <tr>
+                                <td id="home-data-key" class="home-table-1td">
+                                    <script>getText(str_home_data + common_colon)</script>
+                                </td>
+                                <td id="home-data-val">0 B / 0 B</td>
+                            </tr>
+                            <tr>
+                                <td id="home-datatime-key" class="home-table-1td">
+                                    <script>getText(str_home_datatime + common_colon)</script>
+                                </td>
+                                <td id="home-datatime-val">00:00:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="depart"></div>
+                <div class="home-wlaninfo">
+                    <h2><script>getText(str_home_wlanstatus)</script></h2>
+                    <table cellpadding="0" cellspacing="0" class="home-table">
+                        <tr>
+                            <td id="home-wlanstatus-key" class="home-table-1td">
+                                <script>getText(str_home_wlanstatus + common_colon)</script>
+                            </td>
+                            <td id="home-wlanstatus-val"></td>
+                        </tr>
+                        <tr>
+                            <td id="home-wlanuser-key" class="home-table-1td">
+                                <script>getText(str_home_wlanusernum + common_colon)</script>
+                            </td>
+                            <td id="home-wlanuser-val"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="footer" class="footer">
+            <div id="privacy_policy" class="privacy-policy pointer">
+                <a href="#" target="_blank"><span><script type="text/javascript">getText(common_privacy);</script></span></a>
+            </div>
+            <div id="copy_right" class="copyright">
+                <span><script type="text/javascript">getText(common_copyright);</script></span>
+            </div>
+            <div id="open_source" class="opensource">
+                <a href="#" target="_blank"><span><script type="text/javascript">getText(common_opensource);</script></span></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
