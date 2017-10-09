@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+        <link rel="stylesheet" type="text/css" href="../css/wlanmacfilter.css" />
+        <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../lib/json2.js"></script>
+        <script type="text/javascript" src="../language/lang_en_us.js"></script>
+        <script type="text/javascript" src="../js/tools.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/wlanmacfilter.js"></script>
+    </head>
+    <body>
+        <div id="container" class="container">
+            <div id="header" class="header clearfix"></div>
+            <div id="content" class="content clearfix">
+                <div id="content-top" class="content-top"></div>
+                <div class="content-left">
+                    <div id="menu-left" class="menu-left">
+                        <div id="settings"></div>
+                    </div>
+                </div>
+                <div id="content-right" class="content-right">
+                    <div class="content-box">
+                        <div id="main-title" class="main-title">
+                            <h1><script type="text/javascript">getText(str_wlan_macfilter);</script></h1>
+                        </div>
+                        <div class="main-content">
+                            <div id="macfilter">
+                                <p class="tips"><script>getText(str_wlan_macfilter_tips1);</script></p>
+                                <p class="tips"><script>getText(str_wlan_macfilter_tips2);</script></p>
+                                <p class="tips"><script>getText(str_wlan_macfilter_tips3);</script></p>
+                                <p class="tips"><script>getText(str_wlan_macfilter_tips4);</script></p>
+                                <table cellpadding="0" cellspacing="0" width="500" class="">
+                                    <tbody>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_macfilter + common_colon);</script></td>
+                                            <td>
+                                                <select id="macfilterlistbox" class="select-macfilter">
+                                                    <option value="0" selected="selected"><script>getText(common_disable);</script></option>
+                                                    <option value="1"><script>getText(str_wlan_macfilter_allow);</script></option>
+                                                    <option value="2"><script>getText(str_wlan_macfilter_deny);</script></option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <form id="macfilterlist">
+                                    <table>
+                                        <tbody id="macaddrbody">
+                                            <tr id="macaddr-row">
+                                                <td width="210"><input id="macaddr" name="macaddr" type="text"/></td>
+                                                <td><input id="add" class="macfilter-btn" type="button" value="add"/></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                            <div class="btn-area">
+                                <input id="apply" type="button" class="common-btn"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="footer">
+                <div id="privacy_policy" class="privacy-policy pointer">
+                    <a href="#" target="_blank"><span><script type="text/javascript">getText(common_privacy);</script></span></a>
+                </div>
+                <div id="copy_right" class="copyright">
+                    <span><script type="text/javascript">getText(common_copyright);</script></span>
+                </div>
+                <div id="open_source" class="opensource">
+                    <a href="#" target="_blank"><span><script type="text/javascript">getText(common_opensource);</script></span></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

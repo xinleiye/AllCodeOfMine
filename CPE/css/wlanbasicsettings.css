@@ -1,0 +1,30 @@
+
+.basicsetting-tips{
+    margin-bottom: 10px;
+    font: normal 14px/20px arial,sans-serif;
+}
+
+.main-content table{
+    font: normal 12px arial,sans-serif;
+}
+.main-content table tr{
+    height: 32px;
+}
+.select-wpamode{
+    width: 173px;
+    height: 21px;
+    font: normal 12px/18px arial,sans-serif;
+}
+#securitymodetips{
+    color: red;
+}
+#basic-info span{
+    float: left;
+    margin: 0 10px 0 3px;
+}
+table input{
+    float: left;
+}
+.errortips{
+    color: red;
+}

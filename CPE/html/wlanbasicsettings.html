@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="../css/common.css" />
+        <link rel="stylesheet" type="text/css" href="../css/wlanbasicsettings.css" />
+        <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+        <script type="text/javascript" src="../lib/json2.js"></script>
+        <script type="text/javascript" src="../language/lang_en_us.js"></script>
+        <script type="text/javascript" src="../js/tools.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js/wlanbasicsettings.js"></script>
+    </head>
+    <body>
+        <div id="container" class="container">
+            <div id="header" class="header clearfix">
+            </div>
+            <div id="content" class="content clearfix">
+                <div id="content-top" class="content-top"></div>
+                <div class="content-left">
+                    <div id="menu-left" class="menu-left">
+                        <div id="settings"></div>
+                    </div>
+                </div>
+                <div id="content-right" class="content-right">
+                    <div class="content-box">
+                        <div id="main-title" class="main-title">
+                            <h1><script type="text/javascript">getText(str_wlan_basicsettings);</script></h1>
+                        </div>
+                        <div class="main-content">
+                            <div id="basic-info">
+                                <form id="ssidstatus">
+                                    <table cellpadding="0" cellspacing="0" width="500">
+                                        <tbody>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(common_status + common_colon);</script></td>
+                                            <td>
+                                                <input id="ssidon" type="radio" name="status" value="0" /><span><script type="text/javascript">getText(common_on);</script></span>
+                                                <input id="ssidoff" type="radio" name="status" value="1" /><span><script type="text/javascript">getText(common_off);</script></span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <form id="ssidsetting" style="display: none">
+                                    <table cellpadding="0" cellspacing="0" width="500">
+                                        <tbody>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_ssid + common_colon);</script></td>
+                                            <td>
+                                                <input id="ssidname" type="text" name="ssid" />
+                                            </td>
+                                        </tr>
+                                        <tr id="ssidtip" style="display: none">
+                                            <td width="210"></td>
+                                            <td id="ssidtipstring" class="errortips"></td>
+                                        </tr>
+                                        <tr id="broadcast">
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_basicsettings_broadcast + common_colon);</script></td>
+                                            <td>
+                                                <input id="broadcaston" type="radio" name="broadcast" value="1" checked="checked"/><span><script type="text/javascript">getText(common_enable);</script></span>
+                                                <input id="broadcastoff" type="radio" name="broadcast" value="0" /><span><script type="text/javascript">getText(common_disable);</script></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td><script type="text/javascript">getText(str_wlan_basicsettings_broadcasttip);</script></td>
+                                        </tr>
+                                        <tr>
+                                            <td><script type="text/javascript">getText(str_wlan_basicsettings_security + common_colon);</script></td>
+                                            <td>
+                                                <select id="securitymode" name="securitymode" class="select-wpamode"></select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td id="securitymodetips"></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <form id="wpakey" style="display: none">
+                                    <table cellpadding="0" cellspacing="0" width="500" class="">
+                                        <tbody>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_wpakey + common_colon);</script></td>
+                                            <td>
+                                                <input id="securitykey" type="password" name="securitykey" />
+                                            </td>
+                                        </tr>
+                                        <tr id="wpatip" style="display: none">
+                                            <td width="210"></td>
+                                            <td id="wpatipstring" class="errortips"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <input id="showwpa" type="checkbox"/><span><script type="text/javascript">getText(str_wlan_basicsettings_showpsd);</script></span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <form id="wepkey" style="display: none">
+                                    <table cellpadding="0" cellspacing="0" width="500" class="">
+                                        <tbody>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_basicsettings_wepkey1 + common_colon);</script></td>
+                                            <td>
+                                                <input id="wepkey1" type="password" name="wepkey1"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_basicsettings_wepkey2 + common_colon);</script></td>
+                                            <td>
+                                                <input id="wepkey2" type="password" name="wepkey2"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_basicsettings_wepkey3 + common_colon);</script></td>
+                                            <td>
+                                                <input id="wepkey3" type="password" name="wepkey3"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td width="210"><script type="text/javascript">getText(str_wlan_basicsettings_wepkey4 + common_colon);</script></td>
+                                            <td>
+                                                <input id="wepkey4" type="password" name="wepkey4"/>
+                                            </td>
+                                        </tr>
+                                        <tr id="weptip" style="display: none">
+                                            <td width="210"></td>
+                                            <td id="weptipstring" class="errortips"></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>
+                                                <input id="showwep" type="checkbox"/><span><script type="text/javascript">getText(str_wlan_basicsettings_showpsd);</script></span>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                                <div class="btn-area">
+                                    <input id="cancel" type="button" class="common-btn"/>
+                                    <input id="apply" type="button" class="common-btn"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer" class="footer">
+                <div id="privacy_policy" class="privacy-policy pointer">
+                    <a href="#" target="_blank"><span><script type="text/javascript">getText(common_privacy);</script></span></a>
+                </div>
+                <div id="copy_right" class="copyright">
+                    <span><script type="text/javascript">getText(common_copyright);</script></span>
+                </div>
+                <div id="open_source" class="opensource">
+                    <a href="#" target="_blank"><span><script type="text/javascript">getText(common_opensource);</script></span></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

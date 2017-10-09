@@ -1,0 +1,13 @@
+.inputip{
+    width: 40px;
+}
+#serverstatus input{
+    float: left;
+}
+#serverstatus span{
+    float: left;
+    margin: 0 10px 0 3px;
+}
+.error-tips{
+    color: red;
+}

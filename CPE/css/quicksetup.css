@@ -1,0 +1,62 @@
+.qstitle{
+    position: relative;
+    width: 690px;
+    padding: 5px 0 0 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #dedede;
+}
+.qstitle h1{
+    float: left;
+    font: bold 24px/30px arial,sans-serif;
+    color: #12a5d6;
+}
+.step{
+    float: right;
+    width: 140px;
+    margin: 8px 0 0 0;
+    font: bold 14px arial,sans-serif;
+    text-align: left;
+}
+.qscontent{
+    width: 580px;
+    min-height: 400px;
+    height: auto !important;
+    margin: 25px auto;
+}
+.qscontent table{
+    font: normal 13px arial,sans-serif;
+}
+.qscontent table tr{
+    height: 32px;
+}
+.quicksetup-tips{
+    margin-bottom: 15px;
+    font: normal 14px/24px arial,sans-serif;
+}
+.select-profile{
+    width: 340px;
+}
+#profile-username, #profile-password, #profile-apn{
+    width: 336px;
+}
+.select-ethernet{
+    width: 200px;
+    font: normal 13px/18px arial,sans-serif;
+}
+#connectionmode-tips{
+    margin: 5px 0 10px 0;
+    font: normal 13px arial,sans-serif;
+}
+#auto th, #pppoedynamic th{
+    border-bottom: 1px solid #dedede;
+    text-align: left;
+}
+.input-text{
+    width: 170px;
+    margin: 0 10px 0 0;
+    padding: 0 0 0 3px;
+    font: normal 13px/18px arial,sans-serif;
+}
+.error-tips{
+    color: red;
+}

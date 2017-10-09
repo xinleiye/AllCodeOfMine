@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/deviceinfo.css" />
+    <script type="text/javascript" src="../lib/jquery-1.12.4.js"></script>
+    <script type="text/javascript" src="../lib/json2.js"></script>
+    <script type="text/javascript" src="../language/lang_en_us.js"></script>
+    <script type="text/javascript" src="../js/tools.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/ethernetstatus.js"></script>
+</head>
+<body>
+<div id="container" class="container">
+    <div id="header" class="header clearfix"></div>
+    <div id="content" class="content clearfix">
+        <div id="content-top" class="content-top"></div>
+        <div class="content-left">
+            <div id="menu-left" class="menu-left">
+                <div id="settings"></div>
+            </div>
+        </div>
+        <div id="content-right" class="content-right">
+            <div class="content-box">
+                <div id="main-title" class="main-title">
+                    <h1><script type="text/javascript">getText(str_ethernet_status);</script></h1>
+                </div>
+                <div class="main-content">
+                    <div id="advance-info">
+                        <table cellpadding="0" cellspacing="0" width="500" class="">
+                            <tbody>
+                            <tr>
+                                <td width="210"><script type="text/javascript">getText(str_ethernet_connectionmode + common_colon);</script></td>
+                                <td id="connectmode"></td>
+                            </tr>
+                            <tr>
+                                <td width="210"><script type="text/javascript">getText(str_ethernet_status_conn + common_colon);</script></td>
+                                <td id="connectstatus"></td>
+                            </tr>
+                            <tr style="display: none">
+                                <td width="210"><script type="text/javascript">getText(str_ethernet_status_dura + common_colon);</script></td>
+                                <td id="duration"></td>
+                            </tr>
+                            <tr>
+                                <td><script type="text/javascript">getText(str_ethernet_ipaddr + common_colon);</script></td>
+                                <td id="ipaddr"></td>
+                            </tr>
+                            <tr style="display: none">
+                                <td><script type="text/javascript">getText(str_ethernet_status_macaddr + common_colon);</script></td>
+                                <td id="macaddr"></td>
+                            </tr>
+                            <tr>
+                                <td><script type="text/javascript">getText(str_ethernet_subnetmask + common_colon);</script></td>
+                                <td id="netmask"></td>
+                            </tr>
+                            <tr>
+                                <td><script type="text/javascript">getText(str_ethernet_gateway + common_colon);</script></td>
+                                <td id="gateway"></td>
+                            </tr>
+                            <tr>
+                                <td><script type="text/javascript">getText(str_ethernet_1stdns + common_colon);</script></td>
+                                <td id="dns1"></td>
+                            </tr>
+                            <tr>
+                                <td><script type="text/javascript">getText(str_ethernet_2nddns + common_colon);</script></td>
+                                <td id="dns2"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="footer">
+        <div id="privacy_policy" class="privacy-policy pointer">
+            <a href="#" target="_blank"><span><script type="text/javascript">getText(common_privacy);</script></span></a>
+        </div>
+        <div id="copy_right" class="copyright">
+            <span><script type="text/javascript">getText(common_copyright);</script></span>
+        </div>
+        <div id="open_source" class="opensource">
+            <a href="#" target="_blank"><span><script type="text/javascript">getText(common_opensource);</script></span></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

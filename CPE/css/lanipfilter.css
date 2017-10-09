@@ -1,0 +1,60 @@
+#ipfiltermode input{
+    float: left;
+    margin: 0 5px 0 0;
+}
+#ipfiltermode span{
+    float: left;
+    margin: 0 15px 0 0;
+}
+#ipfilterlist {
+    margin: 10px 0 0 0;
+}
+#ipfilterlist h3 {
+
+}
+#ipfilterlistform th{
+    background-color: #55BBFF;
+}
+#ipfilterlistform table{
+    text-align: center;
+}
+#ipfilterlistform input {
+    width: 98%;
+    height: 30px;
+    border: 0;
+    text-align: center;
+}
+.option-btn{
+    float: left;
+    margin: 0 0 0 10px;
+    color: #12a5d6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.ipfilterlistadd-btn{
+    min-width: 70px;
+    width: auto !important;
+    height: 25px;
+    padding: 0 5px 0 5px;
+    margin: 10px 0 0 0;
+    border: 1px solid #55BBFF;
+    border-radius: 2px;
+    background-image:-moz-linear-gradient(#F6FCFF 0%,#ACDDFA 50%,#88D6FA 55%,#7FD6FC 100%);
+    background-image:-webkit-linear-gradient(#F6FCFF 0%,#ACDDFA 50%,#88D6FA 55%,#7FD6FC 100%);
+    background-image:-o-linear-gradient(#F6FCFF 0%,#ACDDFA 50%,#88D6FA 55%,#7FD6FC 100%);
+    background-image:-ms-linear-gradient(#F6FCFF 0%,#ACDDFA 50%,#88D6FA 55%,#7FD6FC 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(0,startColorstr='#F6FCFF', endColorstr='#65CAFC' );
+    -ms-filter:"progid:DXImageTransform.Microsoft.gradient(0,startColorstr='#F6FCFF', endColorstr='#65CAFC')";
+    cursor: pointer;
+    font: bold 13px/25px Arial, sans-serif;
+}
+.oddtr{
+    background-color: #eaeaea;
+}
+.eventr{
+    background-color: #cceeff;
+}
+.errortips{
+    color: red;
+    text-align: left;
+}
